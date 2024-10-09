@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Front Page</title>
+            <link rel="stylesheet" type="text/css" href='../static/css/style2.css'>
+            <script src="/static/js/script.js"></script>
+        </head>
+        <body>
+            <div class="container-jpg">
+                <div class="overlay"></div>
+                <img src="/static/imgs/plant.jpg" alt="Plant">
+            </div>
+     
+        <div class="container-aboutplantdiameter ">
+     
+        <h2>ABOUT PLANT DIAMETER PREDICTION</h2>
+            <p> THis form will help to predict the diameter of the plant 
+                if you provide number of leaves, plant height ambient temperature and humidity </p>
+   
+        
+        </div>
+        <div class="container-diameterprediction">
+            <form id="plantForm"  method="POST" action="/predict" onsubmit="return displayInputValues()" >
+                <h2>Plant Diameter Prediction</h2>
+               
+                <label for="leaves">Enter number of leaves:</label>
+                <input type="text" name="leaves" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a numeric value" required><br><br>
+        
+                <label for="height">Enter plant height (in cm):</label>
+                <input type="text" name="height" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a numeric value" placeholder="Centimeter" required><br><br>
+        
+                <label for="temperature">Enter ambient temperature(in °C):</label>
+                <input type="text" name="temperature" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a numeric value" placeholder="Celsius" id="temperature" required>
+                <br><br>
+                <label for="humidity">Enter ambient humidity (% value):</label>
+                <input type="text" name="humidity" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a numeric value" placeholder="Percentage" id="humidity" required><br><br>
+                
+                <input type="submit" value="Predict"> 
+                <input type="button" value="Clear" onclick="clearForm()">
+                <br> <br>
+              <!--  <p>The predicted diameter is: {{ diameter }}</p> -->
+            </form> 
+            
+               
+                <label for="diameter" id="predictedDiameter"> The predicted diameter is: {{ diameter }} cm</label>
+                <br>
+            <form>
+                 
+            <div class="container-diameterfeedbackuseful">
+              
+                <button id="feedbackButton" onclick="openFeedbackForm()">Website evaluation form</button>
+            </div>
+        </form> 
+        <button onclick="goBack()">Go Back</button>
+
+<script>
+    // Function to handle the prediction when the button is clicked
+function validateForm() 
+{
+  var form = document.getElementById("plantForm");
+  if (!form.checkValidity()) {
+      alert("Please enter valid numeric values.");
+      return false;
+  }
+  return true;
+}
+// Function to clear the form fields and predicted diameter
+function clearForm() 
+        {
+            document.getElementById("plantForm").reset();
+            document.getElementById("predictedDiameter").innerText = "";
+        }
+//document.addEventListener("DOMContentLoaded", function() {
+          //  var feedbackButton = document.getElementById("feedbackButton");
+           // var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScOid8zrmRrgX8SLEKJwfNLYUzfDKYbPTsl598_dOz1PRW9Ww/viewform?usp=sf_link" ; // Replace with your Google Form URL
+            
+           // feedbackButton.addEventListener("click", function() {
+            //    window.open(googleFormURL, "_blank"); // Open the Google Form in a new window or tab
+           // });
+       // });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var feedbackButton = document.getElementById("feedbackButton");
+    feedbackButton.addEventListener("click", function(event) {
+        // Prevent the default form submission behavior
+        event.preventDefault();
+        // Open the Google Form in a new tab
+        openFeedbackForm();
+    });
+});
+      //  function openFeedbackForm() {
+        //    var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLScOid8zrmRrgX8SLEKJwfNLYUzfDKYbPTsl598_dOz1PRW9Ww/viewform?usp=sf_link";
+          //  window.open(googleFormURL, "_blank");
+        //}
+
+        function openFeedbackForm() {
+    var googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSf0xjJ3pZ2b509GDvp5LiJ4iGKFKIVorS3NPaYtJXQkgF1fNQ/viewform?usp=pp_url";
+    
+    // Define the size and position of the pop-up window
+    var width = 600;
+    var height = 800;
+    var left = (screen.width - width) / 2;
+    var top = (screen.height - height) / 2;
+    
+    // Open the pop-up window
+    var popup = window.open(googleFormURL, "Evaluation Form", "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top);
+    
+    // Focus on the pop-up window if it's already open
+    if (window.focus) {
+        popup.focus();
+    }
+}
+
+
+function displayInputValues() {
+        var leaves = document.getElementById("leavesInput").value;
+        var height = document.getElementById("heightInput").value;
+        var temperature = document.getElementById("temperatureInput").value;
+        var humidity = document.getElementById("humidityInput").value;
+
+        var inputValuesDiv = document.getElementById("inputValues");
+        inputValuesDiv.innerHTML = "<p>Number of leaves: " + leaves + "</p>" +
+                                   "<p>Plant height: " + height + " cm</p>" +
+                                   "<p>Ambient temperature: " + temperature + "°C</p>" +
+                                   "<p>Ambient humidity: " + humidity + "%</p>";
+
+        return false; // Prevent form submission
+    }
+
+
+
+
+        function goBack() {
+            window.location.href = "/";
+}
+
+</script>
+
+        </body>
+</html>

@@ -1,0 +1,97 @@
+body {
+  background-color: rgba(255, 255, 255, 0.8);
+  background-image: url('/static/imgs/plant.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #0e0d0d;
+  
+}
+
+.container-about 
+{
+  max-width: 60%;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+    background-color: rgb(255, 255, 255,0.9); /* Add a semi-transparent white background for better readability */
+    
+}
+
+.custom-container {
+  margin-left: 40px;
+  margin-right: 25px;
+}
+
+/* Custom selection color for radio buttons */
+.custom-control-input:checked .custom-control-label::before {
+  background-color: #28a745; /* Green color */
+  border-color: #28a745; /* Green color */
+}
+.custom-control-input:focus .custom-control-label::before {
+  box-shadow: 0 0 0 1px #28a745, 0 0 0 0.2rem rgba(40, 167, 69, 0.25); /* Green color */
+}
+h2 
+{
+     text-align: center;
+     background-color: rgba(36, 181, 181, 0.8);
+     color: white; /* Set the text color to make it readable on the background color */
+     padding: 15px; /* Add padding to create some space around the text */
+     border-radius: 10px; /* Set the border-radius to create rounded corners */
+}
+.custom-input {
+  height: 50px; /* Adjust height as needed */
+ /* width: 20px;  Adjust width as needed */
+
+} 
+.bold-black {
+  font-weight: bold;
+  color: black;}
+  .text-center {
+      text-align: center;
+    }
+
+    .custom-center {
+      text-align: center; /* Center-aligns the text inside the container */
+    }
+      /* Hide the description initially */
+  /* Hide the description initially */
+  .description-column {
+    display: none;
+}
+.description-column {
+  background-color: hsl(175, 90%, 43%); /* Light coral background */
+  padding: 20px;
+  border-radius: 5px;
+  margin-left: 120px;
+  margin-right: 120px;
+  margin-top: 10px;
+}
+/* Apply background color to the columns 
+.col-md-5 {
+  background-color: yellow;
+}
+.col-md-6{ background-color: blueviolet;}
+col-md-7{ background-color: rgb(43, 226, 141);}*/
+.row{
+  color: #ae1919;
+}
+.form-group {
+  margin-bottom: 20px; /* Space between each form group */
+}
+
+p {
+ font-size: 1.3em; /* 120% of the parent element's font size */
+}
+.navbar {
+  z-index: 9999; /* Set a high z-index to ensure the navbar appears above other content */
+}
+
+/* Media Query for small screens */
+@media (max-width: 991px) {
+  .container-about {
+      padding-top: 90px; /* Adjust based on your menu bar height */
+  }
+}

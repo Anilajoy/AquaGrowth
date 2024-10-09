@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title>Front Page</title>
+            <link rel="stylesheet" type="text/css" href="../static/css/watertempstyle.css">
+            <script src="/static/js/script.js"></script>
+        </head>
+        
+            
+            <div class="container-jpg">
+                <div class="overlay"></div>
+                <img src="/static/imgs/plant.jpg" alt="Plant">
+                <form>
+                    <div class="container-aboutwatertemp">
+                     
+                        <h2>ABOUT water temperature PREDICTION</h2>
+                            <p> THis form will help to predict the diameter of the plant 
+                                if you provide number of leaves, plant height ambient temperature and humidity </p>
+                   
+                        
+                    </div>
+                            <div class="container-watertempprediction">
+                         
+                                <h2>Water temp Prediction</h2>
+                               
+                                <label for="tds">Enter TDS (in ppm):</label>
+                                <input type="text" name="tds" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a numeric value" required><br><br>
+                        
+                                <label for="ec">Enter EC (in µS/cm ):</label>
+                                <input type="text" name="diameter" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a numeric value"  required><br><br>
+                        
+                                <label for="pH">Enter water pH:</label>
+                                <input type="text" name="temperature" pattern="[0-9]+(\.[0-9]+)?" title="Please enter a numeric value" placeholder="Celsius" id="temperature" required>
+                                <br><br>
+                                                
+                                <input type="submit" value="Predict">
+                                
+                            </div>
+                        </form>  
+                        
+                        <form>
+                            <div class="container-watertempfeedbackuseful">
+                         
+                                <h2>Your feedback</h2>
+                                <h3> Was the system useful?</h3>
+                                <div class="feedback-options">
+                                    <div class="feedback-option">
+                                        <input type="radio" id="yes" name="feedback" value="yes">
+                                        <label for="yes">Yes</label>
+                                    </div>
+                                    
+                                    <div class="feedback-option">
+                                        <input type="radio" id="no" name="feedback" value="no">
+                                        <label for="no">No</label>
+                                    </div>
+                                </div>
+                            </form>
+                
+                        <form>
+                            <div class="container-watertempfeedbackperformance">
+                         
+                                <h2>Your feedback</h2>
+                                <h3> How is the systems performance?</h3>
+                                <div class="feedback-option left-align">
+                                    <input type="checkbox" id="feedback1" name="feedback" value="Excellent">
+                                    <label for="feedback1">Excellent</label>
+                                </div>
+                                
+                                <div class="feedback-option">
+                                    <input type="checkbox" id="feedback2" name="feedback" value="Good">
+                                    <label for="feedback2">Good</label>
+                                </div>
+                                
+                                <div class="feedback-option">
+                                    <input type="checkbox" id="feedback3" name="feedback" value="Average">
+                                    <label for="feedback2">Average</label>
+                                </div>
+                                
+                                <div class="feedback-option">
+                                    <input type="checkbox" id="feedback4" name="feedback" value="Below Average">
+                                    <label for="feedback4">Below Average</label>
+                                </div>
+                                
+                                <div class="feedback-option">
+                                    <input type="checkbox" id="feedback5" name="feedback" value="Poor">
+                                    <label for="feedback5">Poor</label>
+                                </div>
+                                
+                                <button type="submit">Submit</button>
+                                </div>
+                            </form>
+                
+                            
+                
+                <form>   <div class="container-watertempfeedbackgeneral">
+                    <h2>Comments</h2>
+                    <div style="display: flex; align-items: flex-start;">
+                        <textarea name="feedback" placeholder="Enter your comment here" style="margin-left:15px;height: 100px;width:300px ;" rows="6" id="comment"></textarea>
+                    </div><br><br>
+                    <button type="submit">Submit</button>
+                  </form>
+
+</html>      
+

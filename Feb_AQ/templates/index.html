@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Buttons Example</title>
+    <link rel="stylesheet" type="text/css" href='../static/css/styles.css'>
+    <script src="/static/js/script.js"></script>
+</head>
+<div class="banner">
+    <div class="banner-text">AquaGrowth Forecast</div>
+</div>
+<body>
+
+    <div class="container-jpg">
+        <div class="overlay"></div>
+        <img src='/static/imgs/plant.jpg' alt="Plant">
+    </div>
+
+    <div class="container-about">
+     
+        <h2>Welcome to AquaGrowthForecast</h2>
+        <P><b>About the website AquaGrowthForecast</b></P>
+        <p>
+            AquaGrowthForecast, a small-scale project contributing to the aquaponics community, offers an online platform for predicting plant growth and monitoring water quality. This initiative aims to serve individuals within the aquaponics community seeking insights into these critical aspects of their systems. Plant growth is determined by parameters such as plant height or diameter, while water quality is assessed through measurements of water temperature or pH levels.
+        </p>
+        <p>
+           Aquaponics is the combination of two cultures namely: aquaculture and hydroponics that are in a recirculating system.
+           </p>
+              
+              Aquaponics has some major benefits over traditional farming: 
+              <ul>
+                <li>Requires less land</li>
+                <li>Reduces water consumption</li>
+                <li>Produces healthy organic food</li>
+                <li>Utilizes soil-less farming techniques</li>
+                <li>Eliminates the need for chemical fertilizers</li>
+              </ul>
+                Aquaponics contributes towards food security and sustainability. The plant's food is the nutrient-rich water from the fish tank which serves as a natural fertilizer. There is thus a reduction in pollution into the environment from fertilizers and other chemical products. The aquaponics system reduces discharged waste that is normally dumped into the environment.
+           </p>
+     
+    </div>
+   
+    <div class="container-plant">
+        
+        <h2>Choose an option for Prediction:</h2>
+        
+        <form id="myForm" method="POST" onsubmit="return navigateToAnotherPage()">
+            <label class="radio-label">
+                <input type="radio" name="option" value="Plant Diameter">
+                Plant Diameter
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="option" value="Plant Height">
+                Plant Height
+            </label>
+            <br>
+            <br>
+            <label class="radio-label">
+                <input type="radio" name="option" value="Water pH">
+                Water pH
+            </label>
+            <label class="radio-label">
+                <input type="radio" name="option" value="Water Temperature">
+                Water Temperature
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+        
+    </div>
+<!--
+    <div class="container-water">
+        <h2>Choose an option for predicting:</h2>
+        <form  id="myForm" action="submit_handler.php" method="POST"> 
+           
+                <label class="radio-label">
+                    <input type="radio" name="option" value="Water pH">
+                    Water pH
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="option" value="Water Temperature">
+                    Water Temperature
+                </label>
+                <button type="button" onclick="validateForm()">Submit</button>
+            
+        </form>
+    </div>
+-->
+</body>
+</html>

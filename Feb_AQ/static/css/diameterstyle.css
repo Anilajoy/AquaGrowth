@@ -1,0 +1,283 @@
+body {
+    background-color: rgba(255, 255, 255, 0.8);
+   /* background-image: url('/static/imgs/plant.jpg');*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #0e0d0d;
+}
+
+.container-about 
+{
+
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 255, 255,0.9); /* Add a semi-transparent white background for better readability */
+    
+    position: absolute;
+    top: 40%;
+    left: 100px;
+    transform: translateY(-50%);
+   
+}
+
+.container-plant 
+{
+
+    max-width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background for better readability */
+    
+    position: absolute;
+    top: 20%;
+    right: 100px;
+    transform: translateY(-50%);
+  }
+
+.container-water 
+{
+
+    max-width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9); /* Add a semi-transparent white background for better readability */
+    
+    position: absolute;
+    top: 60%;
+    right: 100px;
+    transform: translateY(-50%);
+}
+h1 {
+text-align: center;
+background-color: rgba(36, 181, 181, 0.8);
+color: white; /* Set the text color to make it readable on the background color */
+padding: 15px; /* Add padding to create some space around the text */
+border-radius: 10px; /* Set the border-radius to create rounded corners */
+}
+
+
+h2 
+{
+    text-align: center;
+    background-color: rgba(36, 181, 181, 0.8);
+    color: white; /* Set the text color to make it readable on the background color */
+    padding: 15px; /* Add padding to create some space around the text */
+    border-radius: 10px; /* Set the border-radius to create rounded corners */
+}
+
+
+.form-container
+{
+display: flex;
+align-items: center;
+justify-content:left;
+flex-wrap: wrap;
+padding: 20px; /* Add some padding around the forms */
+
+}
+
+
+
+.predict-container
+{
+width: 300px; /* Adjust the width as needed */
+background-color: #fff;
+padding: 45px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+.radio-label 
+{
+display: inline-block; /* Display options inline */
+margin-right: 20px; /* Adjust spacing between radio buttons */
+}
+
+button 
+{
+margin-top: 10px; /* Add space between radio buttons and submit button */
+}
+button:hover {
+    background-color: #b9f5e7; /* Change background color on hover */
+}
+
+.container-jpg
+
+{
+position: relative;
+width: 100%;
+}
+
+.overlay
+{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.5); /* Adjust opacity here */
+}
+
+img {
+display: block;
+width: 100%;
+height: auto;
+}
+
+.diameterpredictionform-container {
+display: flex;
+justify-content: space-between; /* Arrange forms horizontally */
+padding: 20px; /* Add some padding around the forms */
+}
+.diameterentry-container {
+width: 300px; /* Adjust the width as needed */
+background-color: #fff;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+}
+
+
+.container-aboutdiameterprediction 
+{
+ 
+     max-width: 500px;
+     margin: 40px auto;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     text-align: center;
+     background-color: rgb(255, 255, 255,0.9); /* Add a semi-transparent white background for better readability */
+     position: absolute;
+     top: 30%;
+     left: 300px;
+     transform: translateY(-50%);
+    
+ }
+.container-aboutplantdiameter 
+{
+
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 255, 255,0.9); /* Add a semi-transparent white background for better readability */
+    position: absolute;
+    top: 20%;
+    left: 100px;
+    transform: translateY(-50%);
+   
+}
+
+
+
+.container-diameterfeedbackuseful
+{
+
+    max-width: 700px;
+    margin: 40px auto;
+    margin-top: 250px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgba(36, 181, 181, 0.8); /* Add a semi-transparent white background for better readability */
+    position: absolute;
+    top: 60%;
+    left: 100px;
+    width: 200px;
+    transform: translateY(-50%);
+   
+}
+.container-diameterfeedbackperformance
+{
+ 
+     max-width: 700px;
+     margin: 40px auto;
+     margin-top: 90px;
+     padding: 20px;
+     border: 1px solid #5c0a0a;
+     border-radius: 5px;
+     text-align: center;
+     background-color: rgba(14, 103, 88, 0.9); /* Add a semi-transparent white background for better readability */
+     position: absolute;
+     top: 100%;
+     left: 400px;
+     width: 300px;
+     transform: translateY(-50%);
+    
+ }
+.container-diameterfeedbackgeneral
+{
+ 
+     max-width: 800px;
+     margin: 40px auto;
+     margin-top: 80px;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     text-align: center;
+     background-color: rgb(255, 255, 255,0.9); /* Add a semi-transparent white background for better readability */
+     position: absolute;
+     top: 60%;
+     left: 900px;
+     width: 300px;
+     transform: translateY(-50%);
+    
+ }
+ .container-diameterprediction
+{
+ 
+     max-width: 800px;
+     margin: 40px auto;
+     margin-top: 120px;
+     padding: 20px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+     text-align: center;
+     background-color: rgb(255, 255, 255,0.9); /* Add a semi-transparent white background for better readability */
+     position: absolute;
+     top: 20%;
+     left: 700px;
+     width: 400px;
+     transform: translateY(-50%);
+    
+ }
+
+
+.container-feedback h2 {
+    margin-bottom: 10px;
+}
+
+.feedback-option {
+    
+    margin-bottom: 10px;
+    display: flex;
+}
+
+
+/* Center the container vertically */
+html, body {
+height: 100%;
+}
+.comment-container {
+width: 300px; /* Adjust the width as needed */
+background-color: #fff;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+bottom: 60;
+}
